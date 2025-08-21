@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Sales Caller</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background: #0b1020; color: #e7e9ee; }
+    .container { max-width: 520px; margin: 56px auto; background: #131a33; padding: 28px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+    h1 { font-size: 22px; margin: 0 0 18px; }
+    label { display: block; font-size: 14px; margin-bottom: 8px; color: #aab4d4; }
+    input, textarea { width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid #2a355f; background: #0f1530; color: #e7e9ee; outline: none; }
+    input::placeholder, textarea::placeholder { color: #7f8bb3; }
+    textarea { min-height: 120px; resize: vertical; }
+    .row { display: grid; gap: 16px; }
+    button { margin-top: 16px; background: #5b7cfa; color: white; border: none; padding: 12px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .status { margin-top: 12px; font-size: 13px; color: #b9c3ea; min-height: 20px; }
+  </style>
+  <script defer src="/app.js"></script>
+ </head>
+<body>
+  <div class="container">
+    <h1>AI Sales Caller</h1>
+    <div class="row">
+      <div>
+        <label for="phone">Recipient Phone Number (E.164, e.g. +14165551234)</label>
+        <input id="phone" type="tel" placeholder="+1xxxxxxxxxx" />
+      </div>
+    </div>
+    <button id="callBtn">Start Call</button>
+    <div id="status" class="status"></div>
+  </div>
+</body>
+</html>
+
+
